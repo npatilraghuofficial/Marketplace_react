@@ -1,0 +1,31 @@
+/* NavbarComponent.css */
+.custom-navbar {
+    position: sticky;
+    top: 0;
+    margin:10px;
+    z-index: 100; /* Add a z-index to ensure it stays on top of other content */
+    background-color: white; /* Change the background color as needed */
+  }
+
+.container-fluid{
+    padding: 0px;
+   
+}
+
+  .proDrop{
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* Style for the search button with a thin border */
+  .search-button {
+    border: 1px solid #ccc;
+  }
+  
+  @media (max-width: 768px) {
+    .custom-navbar .form-control {
+      font-size: 12px; /* Decrease font size */
+      width: 200px; /* Decrease search box size */
+    }
+    
+  }

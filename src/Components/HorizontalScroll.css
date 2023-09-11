@@ -1,0 +1,96 @@
+.container {
+    overflow-x: auto;
+  }
+  
+  /* Define the styling for your cards (you can customize as needed) */
+  .card {
+    width: 200px;
+    height: 300px;
+    cursor: pointer;
+    margin: 10px; /* Adjust margin as needed */
+  }
+  
+
+.md-cards h3 {
+    padding: .5em;
+    margin: 0;
+}
+
+.md-img {
+    pointer-events: none;
+    border-radius: 8px;
+}
+
+.demo-card .mbsc-card-title {
+    font-size: 14px;
+    padding-top: 8px;
+    margin: 0;
+}
+
+.md-rank {
+    font-size: 12px;
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+}
+
+
+/* Hide the horizontal scrollbar */
+.container {
+    overflow-x: hidden;
+  }
+  
+  /* Ensure the content is still scrollable */
+  .row {
+    overflow-x: scroll;
+    /* Optional: You can add some padding or margin to make it look nicer */
+    margin-bottom: -15px;
+    padding-right: 15px;
+  }
+.col-3:hover{
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+.col-3{
+    box-shadow: #e5e5e5;
+}
+
+  
+/* Hide the horizontal scrollbar */
+.container_scroll {
+    overflow-x: hidden;
+    /* Additional properties to hide scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    width: auto;
+    height:auto;
+
+    position: sticky;
+    top: 0;
+    margin:10px;
+    z-index: 100; /* Add a z-index to ensure it stays on top of other content */
+     /* Change the background color as needed */
+  }
+  
+  /* Hide scrollbar thumb (Chrome, Edge, and Safari) */
+  .row::-webkit-scrollbar {
+    width: 0.1rem;
+  }
+  
+  /* Optional: Hide scrollbar track (Chrome, Edge, and Safari) */
+  .row::-webkit-scrollbar-track {
+    display: none;
+  }
+  
+  /* Optional: Hide scrollbar corner (Chrome, Edge, and Safari) */
+  .row::-webkit-scrollbar-corner {
+    display: none;
+  }
+
+  #view{
+    text-align: right;
+    float: right;
+    font-size:15px;
+    text-decoration: none;
+
+  }
