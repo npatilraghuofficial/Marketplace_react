@@ -1,30 +1,41 @@
-import React from 'react'
-import NavbarComponent from './Components/Navbar'
-import Carousal from './Components/Carousal'
+import React from 'react';
+import NavbarComponent from './Components/Navbar';
+import Carousal from './Components/Carousal';
+import AnimatedCardsUtil from './Components/AnimatedCardsUtil';
+import HorizontalScroll from './Components/HorizontalScroll';
+import Footer from './Components/Footer';
+import FeaturedProduct from './Components/FeaturedProduct';
+import FeaturedService from './Components/FeaturedService';
+import FeaturedEvents from './Components/FeaturedEvents';
+import ViewAllTrendingAuctions from './Components/SubPages/ViewAllTrendingAuctions';
 
-import AnimatedCardsUtil from './Components/AnimatedCardsUtil'
-import HorizontalScroll from './Components/HorizontalScroll'
 
+import Home from './Components/Home';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { StyledEngineProvider } from '@mui/material/styles';
+
+
+import ViewAllCategories from './Components/SubPages/ViewAllCategories';
+
+
+import ViewAllServices from './Components/SubPages/ViewAllServices';
+
 const App = () => {
   return (
-    <>
-    <NavbarComponent></NavbarComponent> 
-    <Carousal></Carousal>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/trending" element={<ViewAllTrendingAuctions />} />
 
-   
-    <StyledEngineProvider injectFirst>
-    <HorizontalScroll></HorizontalScroll>  
-    </StyledEngineProvider>
+        <Route path="/categories" element={<ViewAllCategories/>} />
+        <Route path="/services" element={<ViewAllServices/>} />
 
+      </Routes>
     
-    <StyledEngineProvider injectFirst>
-    <AnimatedCardsUtil/>
-    </StyledEngineProvider>
+      
+    
+    </Router>
+  );
+};
 
-   
-     </> 
-  )
-}
-
-export default App
+export default App;

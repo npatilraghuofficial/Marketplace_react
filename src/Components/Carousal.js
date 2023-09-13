@@ -9,20 +9,24 @@ function Carousal() {
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
-          src="https://cdn.wallpapersafari.com/89/62/alBz6X.jpg" // Replace with the path to your first image
+          src="https://img.peapix.com/6fdcdc5eef7a4cc0bb397fc22a3e0efa_480.jpg" 
           alt="First slide"
         />
         <Carousel.Caption>
           <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <p>About Event.</p>
         </Carousel.Caption>
       </Carousel.Item>
 
+
+
+
+    
 
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
-          src="https://th.bing.com/th/id/OIP.GgVivFX4AsNMLn8qr3w9kgHaEi?pid=ImgDet&rs=1" // Replace with the path to your first image
+          src="https://th.bing.com/th/id/OIP.GgVivFX4AsNMLn8qr3w9kgHaEi?pid=ImgDet&rs=1" 
           alt="First slide"
         />
         <Carousel.Caption>
@@ -31,6 +35,17 @@ function Carousal() {
         </Carousel.Caption>
       </Carousel.Item>
 
+      <Carousel.Item interval={1000}>
+        <img
+          className="d-block w-100"
+          src="https://img.peapix.com/6fdcdc5eef7a4cc0bb397fc22a3e0efa_480.jpg" 
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>About Event.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
 
 
         

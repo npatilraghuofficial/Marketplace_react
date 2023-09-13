@@ -23,7 +23,7 @@ export default function DividerStack() {
       <br />
       <div className="container">
         <div className="row">
-          <h3>Trending Auctions</h3>
+          <h3>Featured Products</h3>
          
           <Link to="/trending" className="d-flex justify-content-end">
             View all
@@ -44,16 +44,16 @@ export default function DividerStack() {
           <div
             style={{
               overflow: "auto",
-              maxHeight: "500px", 
-              scrollbarWidth: "none", 
-              WebkitOverflowScrolling: "touch", 
+              maxHeight: "500px", // Adjust maxHeight as needed
+              scrollbarWidth: "none", // Hide scrollbar for Firefox
+              WebkitOverflowScrolling: "touch", // Enable smooth scrolling on iOS
             }}
           >
             <Grid
               container
               justifyContent="space-around"
               alignItems="center"
-              spacing={{ xs: 21, md: 25 }}
+              spacing={{ xs: 21, md: 30 }}
               columns={{ xs: 30, sm: 30, md: 30 }}
             >
               {cards
@@ -63,12 +63,15 @@ export default function DividerStack() {
                     <Card
                       style={{
                         width: "250px",
-                        height: "470px",
+                        height: "400px",
                         cursor: "pointer",
                         overflowX: "auto", 
                         overflowX: "auto", 
                         backgroundImage: 'url("")', 
                         backgroundSize: 'cover', 
+                        backgroundSize: 'cover', 
+                      backgroundColor: "#f5f5f9", // Light gray background color
+                      border: "2px solid green", // Add a thin border
                       }}
                     >
                       <CardContent>
@@ -76,7 +79,7 @@ export default function DividerStack() {
           component="img"
           height="200"
           image={card.image}
-          alt="Auction Item Image"
+          alt="ProductImage"
         />
 
 <Typography gutterBottom variant="h6" component="div">
@@ -86,11 +89,9 @@ export default function DividerStack() {
   <h6 className="mb-0">{card.productName}</h6>
  
   <h6 className="mb-0">{card.productNumber}</h6>
-  <h6 className="mb-0">Initial Bidding: {card.initialBidding}</h6>
+  <h6 className="mb-0">Price: {card.initialBidding}</h6>
   <div className="d-flex flex-column">
-    <span className="badge bg-primary">Auction ID: {card.auctionId}</span>
-    <span className="badge bg-success">Start Date: {card.startDate}</span>
-    <span className="badge bg-danger">End Date: {card.endDate}</span>
+
   </div>
 
                       </CardContent>
@@ -108,7 +109,7 @@ export default function DividerStack() {
 
 const cards = [
   {
-    title: "Auction Item 1",
+    title: "Product1",
     auctionId: "12345",
     productName: "Product 1",
     productNumber: "P001",
@@ -118,7 +119,7 @@ const cards = [
     image: "https://media.ldlc.com/ld/products/00/05/88/62/LD0005886202_1.jpg",
   },
   {
-    title: "Auction Item 2",
+    title: "Product2",
     auctionId: "67890",
     productName: "Product 2",
     productNumber: "P002",
@@ -128,7 +129,7 @@ const cards = [
     image:"https://brain-images-ssl.cdn.dixons.com/2/2/10165822/u_10165822.jpg",
   },
   {
-    title: "Auction Item 3",
+    title: "Product3",
     auctionId: "67890",
     productName: "Product 3",
     productNumber: "P003",
@@ -138,7 +139,7 @@ const cards = [
     image:"https://th.bing.com/th/id/OIP.B7XEaC7UBDMzcjYQjrhHZAHaHa?pid=ImgDet&rs=1"
   },
   {
-    title: "Auction Item 4",
+    title: "Product4",
     auctionId: "67894",
     productName: "Product 4",
     productNumber: "P002",
@@ -148,7 +149,7 @@ const cards = [
     image:"https://th.bing.com/th/id/OIP.4LKQ2-Q2L4_q-6mWxUgu_AHaHd?pid=ImgDet&rs=1"
   },
   {
-    title: "Auction Item 5",
+    title: "Product5",
     auctionId: "67890",
     productName: "Product 2",
     productNumber: "P002",
@@ -158,7 +159,7 @@ const cards = [
     image:"https://i.pinimg.com/originals/be/3b/38/be3b38e5979d4642643443eac9eedd3c.jpg"
   },
   {
-    title: "Auction Item 6",
+    title: "Product6",
     auctionId: "67890",
     productName: "Product 2",
     productNumber: "P002",
@@ -168,7 +169,7 @@ const cards = [
     image:"https://th.bing.com/th/id/OIP.9oJ6vUE8ulj3WWFvMxXkygHaHa?pid=ImgDet&rs=1",
   },
   {
-    title: "Auction Item 7",
+    title: "Product7",
     auctionId: "67890",
     productName: "Product 2",
     productNumber: "P002",
@@ -178,7 +179,7 @@ const cards = [
     image:"https://th.bing.com/th/id/OIP.jWWfe03XZqzW3f4qkcl_xAHaEK?pid=ImgDet&rs=1",
   },
   {
-    title: "Auction Item 8",
+    title: "Product8",
     auctionId: "67890",
     productName: "Product 2",
     productNumber: "P002",
@@ -189,7 +190,7 @@ const cards = [
   },
 
   {
-    title: "Auction Item 8",
+    title: "Product8",
     auctionId: "67890",
     productName: "Product 2",
     productNumber: "P002",
@@ -216,7 +217,7 @@ const listItems = cards.map((item) => (
           component="img"
           height="200"
           image={item.image}
-          alt="Auction Item Image"
+          alt="ProductImage"
         />
 
         <Typography gutterBottom variant="h5" component="div">

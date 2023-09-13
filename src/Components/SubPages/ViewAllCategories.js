@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@mui/material/Divider";
 import Paper from "@mui/material/Paper";
@@ -11,6 +11,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Card from "react-animated-3d-card";
 import Icon from "@mui/material/Icon"; // Import Icon component
+
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDesktop,
@@ -23,40 +25,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 
-import { Link } from "react-router-dom";
 export default function DividerStack() {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    // Add an event listener to check the screen size on resize
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768); // Adjust the breakpoint as needed
-    };
-
-    // Initial check
-    handleResize();
-
-    // Attach the event listener
-    window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  // Filter the items based on screen size
-  const filteredItems = isSmallScreen ? listItems.slice(0, 6) : listItems.slice(0,9);
-
   return (
     <>
       <br />
       <div className="container">
         <div className="row">
           <h3>View All Categories</h3>
-          <Link to="/categories" className="d-flex justify-content-end">
-            View all
-          </Link>
+         
         </div>
         <h6>See what's popular across thousands of Auctions</h6>
 
@@ -70,7 +46,7 @@ export default function DividerStack() {
             spacing={{ xs: 2, md: 4 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
-            {filteredItems}
+            {listItems}
           </Grid>
         </Box>
         <hr />
@@ -83,43 +59,43 @@ const cards = [
   {
     title: "Electronics and Gadgets",
     text: "Explore the latest tech gadgets",
-    icon: faDesktop, 
+    icon: faDesktop, // FontAwesome icon for Electronics and Gadgets
     category: "Electronics and Gadgets",
   },
   {
     title: "Wellness and Healthcare",
     text: "Stay healthy with our healthcare products",
-    icon: faBriefcaseMedical, 
+    icon: faBriefcaseMedical, // FontAwesome icon for Wellness and Healthcare
     category: "Wellness and Healthcare",
   },
   {
     title: "Fashions and Apparel",
     text: "Upgrade your wardrobe with the latest fashion trends",
-    icon: faTshirt, 
+    icon: faTshirt, // FontAwesome icon for Fashions and Apparel
     category: "Fashions and Apparel",
   },
   {
     title: "Data Analytics and Engineering",
     text: "Explore data analytics and engineering tools",
-    icon: faChartLine,
+    icon: faChartLine, // FontAwesome icon for Data Analytics and Engineering
     category: "Data Analytics and Engineering",
   },
   {
     title: "Software Development",
     text: "Enhance your coding skills with our software development resources",
-    icon: faCode, 
+    icon: faCode, // FontAwesome icon for Software Development
     category: "Software Development",
   },
   {
     title: "Appliances",
     text: "Discover the latest home appliances",
-    icon: faBlender, 
+    icon: faBlender, // FontAwesome icon for Appliances
     category: "Appliances",
   },
   {
     title: "Paintings",
     text: "Experience the world of art with our paintings",
-    icon: faPalette, 
+    icon: faPalette, // FontAwesome icon for Paintings
     category: "Paintings",
   },
 
@@ -241,19 +217,21 @@ const listItems = cards.map((item) => (
       }}
     >
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          <FontAwesomeIcon icon={item.icon} /> {item.title}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {item.text}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Category: {item.category}
-        </Typography>
+      <Typography gutterBottom variant="h5" component="div">
+  <FontAwesomeIcon icon={item.icon} /> {item.title}
+</Typography>
+<Typography variant="body2" color="text.secondary">
+  {item.text}
+</Typography>
+<Typography variant="body2" color="text.secondary">
+  Category: {item.category}
+</Typography>
+
+
+       
+
+
       </CardContent>
     </Card>
   </Grid>
 ));
-
-
-

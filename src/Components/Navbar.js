@@ -19,17 +19,11 @@ function NavbarComponent() {
       <Container fluid>
         <Navbar.Toggle aria-controls="navbarScroll" form-control />
 
-        <Dropdown as={Col} xs="auto" sm="auto" md="auto" lg="auto" xl="auto" className='proDrop'>
-  <Dropdown.Toggle className="primary" id="dropdown-basic">
-    Products
-  </Dropdown.Toggle>
-  <Dropdown.Menu>
-    <Dropdown.Item href="#action1">Action 1</Dropdown.Item>
-    <Dropdown.Item href="#action2">Action 2</Dropdown.Item>
-    <Dropdown.Item href="#action3">Action 3</Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown>
+      
 
+<Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
+          <i className="fa fa-filter md=auto m-4"> Filter</i>
+        </Col>
 
         <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
           <Form className="d-flex">
@@ -40,7 +34,7 @@ function NavbarComponent() {
               size="25"
               aria-label="Search"
             />
-            <Button variant="outline-success">
+            <Button variant="outline-success" className="searchButton">
               <FontAwesomeIcon icon={faSearch} />
             </Button>
           </Form>
@@ -51,28 +45,113 @@ function NavbarComponent() {
             <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
               <Nav.Link href="#action1">Home</Nav.Link>
             </Col>
-            <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
-              <Nav.Link href="#action2">Link</Nav.Link>
-            </Col>
-            <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
+            
+
+
+            {/* <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
               <Dropdown as={NavDropdown} title="Link" id="navbarScrollingDropdown">
                 <Dropdown.Item href="#action3">Action</Dropdown.Item>
                 <Dropdown.Item href="#action4">Another action</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item href="#action5">Something else here</Dropdown.Item>
               </Dropdown>
+            </Col> */}
+
+<Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
+              <Nav.Link href="#" >
+              <NavDropdown title="Auctions" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Previous Events</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+               Bid Now
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+
+              </Nav.Link>
+
+
+             
+
+
+              
             </Col>
+
+
             <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
-              <Nav.Link href="#" disabled>
-                Link
+              <Nav.Link href="#" >
+              <NavDropdown title="Product Listing" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Product 1</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+              Product 2
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Product 3</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+              Product 5
+              </NavDropdown.Item>
+            </NavDropdown>
+
+              </Nav.Link>
+
+
+             
+
+
+              
+            </Col>
+
+
+
+            <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
+              <Nav.Link href="#" >
+              <NavDropdown title="Service Listing" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Service 1</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+              Service 2
+                            </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Service 3</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+              Service 4
+                            </NavDropdown.Item>
+            </NavDropdown>
+
+              </Nav.Link>
+
+
+             
+
+
+              
+            </Col>
+
+            <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
+              <Nav.Link href="#" >
+               Reverse Auctions
               </Nav.Link>
             </Col>
+
+            <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
+              <Nav.Link href="#" >
+                Virtual Meet  
+              </Nav.Link>
+            </Col>
+
+
+            <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
+              <Nav.Link href="#" >
+               Inquiries  
+              </Nav.Link>
+            </Col>
+
           </Row>
         </Navbar.Collapse>
 
-        <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto">
-          <i className="fa fa-filter"> Filter</i>
-        </Col>
+       
       </Container>
     </Navbar>
   );

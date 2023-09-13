@@ -2,14 +2,13 @@
     overflow-x: auto;
   }
   
-  /* Define the styling for your cards (you can customize as needed) */
   .card {
     width: 200px;
     height: 300px;
     cursor: pointer;
     margin: 10px; /* Adjust margin as needed */
   }
-  
+
 
 .md-cards h3 {
     padding: .5em;
@@ -43,7 +42,7 @@
   /* Ensure the content is still scrollable */
   .row {
     overflow-x: scroll;
-    /* Optional: You can add some padding or margin to make it look nicer */
+ 
     margin-bottom: -15px;
     padding-right: 15px;
   }
@@ -60,16 +59,15 @@
 .container_scroll {
     overflow-x: hidden;
     /* Additional properties to hide scrollbar */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
     width: auto;
     height:auto;
 
     position: sticky;
     top: 0;
     margin:10px;
-    z-index: 100; /* Add a z-index to ensure it stays on top of other content */
-     /* Change the background color as needed */
+    z-index: 100; 
   }
   
   /* Hide scrollbar thumb (Chrome, Edge, and Safari) */
@@ -94,3 +92,18 @@
     text-decoration: none;
 
   }
+
+  /* Hide the scrollbar for Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* Hide the scrollbar for Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}

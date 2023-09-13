@@ -7,9 +7,25 @@
     background-color: white; /* Change the background color as needed */
   }
 
+
+/* Define styles for Nav.Link elements when hovered */
+.nav-link:hover {
+  background-color: whitesmoke; /* Change the background color on hover */
+  color: black; /* Change the text color on hover */
+  font-size: large;
+  box-shadow: 0px 2px 4px gainsboro; /* Add a shadow effect */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+
+
 .container-fluid{
     padding: 0px;
    
+}
+.searchButton{
+margin:5px;
+
 }
 
   .proDrop{
@@ -24,8 +40,18 @@
   
   @media (max-width: 768px) {
     .custom-navbar .form-control {
-      font-size: 12px; /* Decrease font size */
-      width: 200px; /* Decrease search box size */
+      font-size: 20px; /* Decrease font size */
+      width: 400px; /* Decrease search box size */
     }
+
+  
     
+  }
+  @media (max-width: 508px) {
+    .custom-navbar .form-control {
+      font-size: 20px; /* Decrease font size */
+      width: 280px; /* Decrease search box size */
+      padding:5px;
+      margin-left:10px;
+    }
   }

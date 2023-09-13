@@ -1,0 +1,54 @@
+/* Add this CSS to your stylesheets */
+/* MIUI-style pagination */
+.miui-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .miui-pagination-item {
+    cursor: pointer;
+    font-size: 18px;
+    color: #007bff;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .miui-pagination-item:hover {
+    color: #0056b3;
+  }
+  
+  .miui-pagination-item.active {
+    font-weight: bold;
+    color: #0056b3;
+  }
+  
+  /* MIUI-style arrows */
+  .miui-pagination-previous,
+  .miui-pagination-next {
+    cursor: pointer;
+    font-size: 18px;
+    color: #007bff;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .miui-pagination-previous:hover,
+  .miui-pagination-next:hover {
+    color: #0056b3;
+  }
+  
+  /* Optional smooth scroll animation for arrow click */
+  .miui-pagination-previous,
+  .miui-pagination-next {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .miui-pagination-previous.active,
+  .miui-pagination-next.active {
+    transform: scale(1.2); /* Increase the size on active state */
+  }
+  
